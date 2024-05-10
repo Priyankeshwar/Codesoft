@@ -6,7 +6,7 @@ import string
 
 def password_gen(length, lowercase=True, uppercase=True, digit=True, special_char=True):
 
-    character = " "
+    character = ""
     if lowercase:
         character += string.ascii_lowercase
     if uppercase:
@@ -16,7 +16,7 @@ def password_gen(length, lowercase=True, uppercase=True, digit=True, special_cha
     if special_char:
         character += string.punctuation
 
-    password = " ".join(random.choice(character) for char in range(length))
+    password = "".join(random.choice(character) for char in range(length))
     return password
 
 
